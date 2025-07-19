@@ -54,12 +54,18 @@ Samen Sterker is een innovatieve mental health app die privacy, community, AI-ad
 - Niet bedoeld als vervanging voor professionele hulp.
 - Issues, feedback en PR's zijn welkom!
 
-## 🛡️ Veiligheid & Privacy
+## Veiligheid & Privacy
 - Geen gevoelige data in de repo: secrets staan in `.env`/`appsettings.Development.json` (zie `.gitignore`).
 - JWT-authenticatie, veilige wachtwoordopslag, en CORS zijn standaard.
 
-## Licentie
-MIT (of voeg je eigen licentie toe)
+## License
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You are free to use and modify this code for **personal or educational purposes only**.  
+**Commercial use is strictly prohibited.**
+
+See the [LICENSE](./LICENSE) file for more details.
 
 ---
 
