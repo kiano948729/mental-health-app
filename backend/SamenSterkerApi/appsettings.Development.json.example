@@ -1,0 +1,11 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "VUL_HIER_JE_SUPABASE_CONNECTION_STRING_IN"
+  },
+  "Jwt": {
+    "Key": "VUL_HIER_EEN_STERKE_JWT_KEY_IN"
+  },
+  "OpenAI": {
+    "ApiKey": "VUL_HIER_JE_OPENAI_API_KEY_IN"
+  }
+} 

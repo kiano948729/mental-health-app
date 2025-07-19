@@ -1,0 +1,29 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VSCode/JetBrains
+.vscode/
+.idea/
+
+# React Native/Node
+node_modules/
+npm-debug.log
+yarn-error.log
+.expo/
+.expo-shared/
+
+# Environment/Secrets
+*.env
+.env.*
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Local.json
+
+# OS
+.DS_Store
+Thumbs.db 
