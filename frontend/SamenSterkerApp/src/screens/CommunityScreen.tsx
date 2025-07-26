@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Alert, Modal, TextInput, Button } from 'react-native';
 import api from '../api/api';
+import CommentsList from '../components/CommentsList';
+import CommentInput from '../components/CommentInput';
 
 interface CommunityPost {
   id: string;
@@ -18,6 +20,7 @@ const CommunityScreen: React.FC = () => {
   const [showShareModal, setShowShareModal] = useState(false);
   const [shareMessage, setShareMessage] = useState('');
   const [shareMood, setShareMood] = useState<number | null>(null);
+  const [openComments, setOpenComments] = useState<{ [postId: string]: boolean }>({});
 
   useEffect(() => {
     loadCommunityPosts();
@@ -64,6 +67,10 @@ const CommunityScreen: React.FC = () => {
     }
   };
 
+  const toggleComments = (postId: string) => {
+    setOpenComments((prev) => ({ ...prev, [postId]: !prev[postId] }));
+  };
+
   const getMoodEmoji = (mood: number) => {
     const emojis = ['😞', '😕', '😐', '🙂', '😄'];
     return emojis[mood - 1] || '😐';
@@ -94,6 +101,17 @@ const CommunityScreen: React.FC = () => {
         </TouchableOpacity>
         <Text style={styles.timestamp}>{formatDate(item.timestamp)}</Text>
       </View>
+      <TouchableOpacity onPress={() => toggleComments(item.id)} style={{ marginTop: 8 }}>
+        <Text style={{ color: '#9DC183', fontWeight: 'bold' }}>
+          {openComments[item.id] ? 'Verberg reacties' : 'Toon reacties'}
+        </Text>
+      </TouchableOpacity>
+      {openComments[item.id] && (
+        <View style={{ marginTop: 8 }}>
+          <CommentsList postId={item.id} />
+          <CommentInput postId={item.id} onCommentAdded={() => {}} />
+        </View>
+      )}
     </View>
   );
 

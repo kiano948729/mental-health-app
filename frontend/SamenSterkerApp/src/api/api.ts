@@ -20,5 +20,7 @@ api.interceptors.request.use(async (config) => {
 export const getNotifications = () => api.get('/notification');
 export const markNotificationAsRead = (id: string) => api.post(`/notification/read/${id}`);
 export const saveExpoPushToken = (ExpoPushToken: string) => api.post('/auth/profile/expo-token', { ExpoPushToken });
+export const getComments = (postId: string) => api.get(`/community/posts/${postId}/comments`);
+export const addComment = (postId: string, message: string) => api.post(`/community/posts/${postId}/comments`, { message });
 
 export default api; 
