@@ -2,15 +2,15 @@ namespace SamenSterkerApi.DTOs
 {
     public class CreateCommunityPostCommentDto
     {
-        public string Message { get; set; } = string.Empty;
+        public required string Message { get; set; }
     }
 
     public class CommunityPostCommentResponseDto
     {
-        public string Id { get; set; } = string.Empty;
-        public string UserId { get; set; } = string.Empty;
-        public string UserName { get; set; } = string.Empty;
-        public string Message { get; set; } = string.Empty;
-        public string Timestamp { get; set; } = string.Empty;
+        public required string Id { get; set; }
+        public required string UserId { get; set; }
+        public required string UserName { get; set; }
+        public required string Message { get; set; }
+        public required string Timestamp { get; set; }
     }
 } 

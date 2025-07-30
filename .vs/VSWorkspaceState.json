@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\SamenSterkerApi",
+    "\\database",
+    "\\frontend",
+    "\\frontend\\SamenSterkerApp"
+  ],
+  "SelectedNode": "\\frontend\\SamenSterkerApp\\App.tsx",
+  "PreviewInSolutionExplorer": false
+}

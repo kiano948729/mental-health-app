@@ -19,9 +19,6 @@ namespace SamenSterkerApi.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ProgressEntry>()
-                .Property(e => e.JournalText)
-                .IsRequired(false);
-            modelBuilder.Entity<ProgressEntry>()
                 .HasOne<User>()
                 .WithMany()
                 .HasForeignKey(e => e.UserId);

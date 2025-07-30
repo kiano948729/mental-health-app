@@ -7,7 +7,7 @@ namespace SamenSterkerApi.Models
         public Guid Id { get; set; }
         public Guid PostId { get; set; }
         public Guid UserId { get; set; }
-        public string Message { get; set; } = string.Empty;
+        public required string Message { get; set; }
         public DateTime Timestamp { get; set; }
     }
 } 
